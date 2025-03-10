@@ -1,0 +1,4 @@
+table_keys=prev_standdoc,prev_data,prev_herbs
+prev_standdoc.filename=config/assets/csv/prev_standdoc.csv
+prev_data.filename=config/assets/csv/prev_data.csv
+prev_herbs.filename=config/assets/csv/prev_herbs.csv
