@@ -17,24 +17,30 @@ The primary code for this application is contained within the 'app/config' folde
 | tables               | The ‘tables’ folder contains the ODK-X designs for each individual form as well as definitions for how the application should read past years data forms.   |
 
 ----
-Connecting to and Running Docker Container 
-
-
-
+**Connecting to and Running Docker Container**
 
 ----
-Downloading and Installing Software on New Tablets
+**Dependencies for Working with Tablet Software on Windows/Mac**
 
-
-
+The following are required to interact with and operate the tablets from a Windows/Mac computer.
+1. [Java Run Time Environment](https://java.com/en/download/)
+2. [Node.js](https://nodejs.org/en/)
+3. [Grunt](https://gruntjs.com/getting-started)
+4. [Android Studio ](https://developer.android.com/studio)
+5. [Android Debug Bridge (ADB)](https://developer.android.com/studio/releases/platform-tools)
 
 ----
-Updating Tablets Prior to Field Season
+**Seeding Software Updates to New Tablets**
 
+----
+**Downloading and Installing Software on New Tablets**
 
+Without a tablet set up to 'seed' the other tablets, a full install is required. This is a involved process and should not be attempted if another tablet already has the software intealled. 
 
+----
+**Updating Tablets Prior to Field Season**
 
 ----
 **Tips on Troublsehooting**
 
-By default, the ODK-X application stores logs on the Android device which can be found in /XXX/XXX/XXX. The error codes and timing are often difficult to understand, especially without experience in Javascript. It is often easier to debug using the _logcat_ interface of Android Studio (Downloadable [here](https://developer.android.com/studio?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjws-S-BhD2ARIsALssG0bF5EcQoccimZHGXTeyvRi-UQ4OVuVTcZZkRqRUyRphM1Uve09Y2zQaAoWjEALw_wcB)). Plug the tablet into a computer running Android Studio and follow the [logcat documentation](https://developer.android.com/studio/debug/logcat) to get started. Debug by using the tablet and tracing errors on the logcat window filtered to "ODK" to remove system logs. 
+By default, the ODK-X application stores logs on the Android device which can be found in /XXX/XXX/XXX. The error codes and timing are often difficult to understand, especially without experience in Javascript. It is often easier to debug using the _logcat_ interface of Android Studio (Downloadable [here](https://developer.android.com/studio)). Plug the tablet into a computer running Android Studio and follow the [logcat documentation](https://developer.android.com/studio/debug/logcat) to get started. Debug by using the tablet and tracing errors on the logcat window filtered to "ODK" to remove system logs. 
