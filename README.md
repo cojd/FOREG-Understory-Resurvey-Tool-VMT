@@ -35,8 +35,5 @@ Updating Tablets Prior to Field Season
 
 
 ----
-Tips on Troubleshooting
-
-
-
-
+**Tips on Troublsehooting**
+By default, the ODK-X application stores logs on the Android device which can be found in /XXX/XXX/XXX. The error codes and timing are often difficult to understand, especially without experience in Javascript. It is often easier to debug using the _logcat_ interface of Android Studio (Downloadable [here](https://developer.android.com/studio?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjws-S-BhD2ARIsALssG0bF5EcQoccimZHGXTeyvRi-UQ4OVuVTcZZkRqRUyRphM1Uve09Y2zQaAoWjEALw_wcB)). Plug the tablet into a computer running Android Studio and follow the [logcat documentation](https://developer.android.com/studio/debug/logcat) to get started. Debug by using the tablet and tracing errors on the logcat window filtered to "ODK" to remove system logs. 
