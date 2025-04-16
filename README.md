@@ -40,6 +40,37 @@ Without a tablet set up to 'seed' the other tablets, a full install is required.
 ----
 **Updating Tablets Prior to Field Season**
 
+Updating tablets prior to field season requires erasing all previous season's data and should only be done once backups have been saved. 
+
+Updating is a five step process: 
+1. Create new versions and replace old versions of data files: standdoc, prevdata, and prevherbs
+2. Reset all tablets
+3. Seed a single tablet to seed others with new data
+4. Reset Docker server from seeding tablet
+5. Download new database to all other tablets
+
+**Step 1:** Create new versions and replace old versions of data files: standdoc, prevdata, and prevherbs
+
+Located within 'app/assets/csv' will be 3 data files that need to be updated each field season, standdoc.csv, prevdata.csv, and prevherbs.csv. Make careful note of the structure and column names in each file to replicate in new version (column order, capitalization, and column definitions must match). Use the survey data from previous years to generate new versions and replace the old files. File names must match exactly (i.e., prevdata_2024.csv is not allowed).
+
+**Step 2:** Reset all tablets
+
+Each tablet will need to be reset, which is done by navigating to the internal storage of each tablet (files) and deleting the "opendatakit" folder. 
+
+**Step 3:** Seed a single tablet to seed others with new data
+
+Follow the steps above in **Seeding Software Updates to New Tablets** to place the updated software and database on a single tablet. 
+
+**Step 4:** Reset Docker server from seeding tablet
+
+From the seeding tablet used in Step 3, reset the Docker SQL databases. This can only be done from a tablet logged in to the server as "foregadmin" and with administrator priviliges within the ODK-X Tables app. Once logged in as admin (server settings within ODK-X Tables), navigate within the application to "Admin Access to Settings" (default password: 9999) to log in as an admin. Once logged in, extra options in the General Settings menuwill appear. Click on Server Settings and a button should appear in the bottom right hand corner with a prompt to reset the app server. Click this button and wait while the Docker server is reconfigured. 
+
+_Note: In some cases, resetting the application server is unsucessful for unknown reasons. If this happens, follow the section_ **Using ODK-X Suitcase** _to reset the Docker server. Once reset from Suitcase, follow Step 4._
+
+**Step 5:** Download new database to all other tablets
+
+With the seeding tablet updated and all other tablets reset, connect each tablet to the server using "Server Settings" in the general settings of the ODK-X Tables app. Authentication over HTTP must be enabled, which is disabled by default and may reset between surveys. HTTP authentication can be re-enabled by logging in as admin (Admin Access to Settings, default password: 9999) and then navigating to "Manage ability to change Sever Settings". Make sure that "Allow unsafe/unsecured Authenticion" is enabled. We like to live on the edge. (from behind a VPN). Once enabled, log into the server from the ODK-X Tables application and click "Sync Now" to download new configuration. Repeat for each non seeding tablet application. 
+
 ----
 **Setting up Docker Server on New Workstation**
 
